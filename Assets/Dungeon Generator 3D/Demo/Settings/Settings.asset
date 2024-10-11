@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generation:
     minRooms: 15
-    maxRooms: 40
+    maxRooms: 15
     amountOfAdjacentRoomsToConnect: 3
     minRoomWidth: 8
     maxRoomWidth: 12
@@ -54,7 +54,9 @@ MonoBehaviour:
     minEnemiesPerRoom: 2
     maxEnemiesPerRoom: 4
     enemies: []
-    bosses: []
+    bosses:
+    - gameObject: {fileID: 8423977057196965190, guid: 7b379a005e70ae94284563152f2e0f7d, type: 3}
+      name: 
     breakables:
     - gameObject: {fileID: 8181098449977157587, guid: 67e1f11333672b74aa420ecf5309fe15, type: 3}
       name: Broooo
@@ -62,7 +64,7 @@ MonoBehaviour:
     - gameObject: {fileID: 6550736659576260371, guid: 9f7a08f73b4a03a4180a51ec8f02901c, type: 3}
       name: Please
     wallObjects:
-    - gameObject: {fileID: 4661971584947106424, guid: ccadb1a25c0c5e04caa54dfe57143fac, type: 3}
+    - gameObject: {fileID: 1688544825977864341, guid: ccbfdc64594325c4ebfb2ccd9a074f8b, type: 3}
       name: 
     - gameObject: {fileID: 7004047727305979125, guid: 926430cd3e737b1478bdd1295f827855, type: 3}
       name: 
