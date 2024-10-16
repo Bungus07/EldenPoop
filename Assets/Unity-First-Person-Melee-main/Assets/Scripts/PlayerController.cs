@@ -191,12 +191,11 @@ public class PlayerController : MonoBehaviour
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, attackDistance, attackLayer))
         { 
             HitTarget(hit.point);
-
-            if(hit.transform.TryGetComponent<Actor>(out Actor T))
-            { T.TakeDamage(attackDamage); }
+            Debug.Log("RaycastHasHit " + hit.collider.name);
+            if(hit.transform.TryGetComponent<EnemyControls>(out EnemyControls T))
+            { T.DamageEnemy(attackDamage); }
         } 
     }
-
     void HitTarget(Vector3 pos)
     {
         audioSource.pitch = 1;

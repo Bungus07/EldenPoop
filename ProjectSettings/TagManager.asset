@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - OuterCorner
   - Room
+  - EnemyDetectionRadious
+  - Souls
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Floor
   - 
   - 
   - 
