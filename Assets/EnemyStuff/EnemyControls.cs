@@ -28,10 +28,12 @@ public class EnemyControls : MonoBehaviour
     public float Distance;
     public float KnockBackDistance;
     public int EnemyDamage;
+    public bool IsBoss;
+    private BossController BossScript;
     private PlayerController PlayerScript;
     [Header("DetectionRadious")]
     public Collider DetectionRadious;
-    private GameObject Player;
+    public GameObject Player;
     private float LundgeTimer;
     public float LundgeIntervul;
     private bool IsLundging;
@@ -73,6 +75,10 @@ public class EnemyControls : MonoBehaviour
         EnemyOrigonalRotation = gameObject.transform.rotation;
         Speed = BaseSpeed;
         EnemyOriginalEulerRotation = gameObject.transform.localEulerAngles;
+        if (IsBoss)
+        {
+            BossScript = gameObject.GetComponent<BossController>();
+        }
         if (gameObject.GetComponent<BossController>() != null)
         {
             Player.transform.GetChild(2).GetComponent<Compass>().BossEnemy = gameObject;
@@ -177,6 +183,10 @@ public class EnemyControls : MonoBehaviour
         if (EnemyHealth <= 0) 
         {
             EnemyDeath();
+        }
+        if (IsBoss)
+        {
+            BossScript.IsAggressive = true;
         }
     }
     public void PlayerDetect()

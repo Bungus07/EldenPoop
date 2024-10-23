@@ -10,6 +10,8 @@ TagManager:
   - Room
   - EnemyDetectionRadious
   - Souls
+  - Enemy
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 389260037603299296}
   m_Layer: 7
   m_Name: NightMareDragon
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2792,7 +2792,7 @@ GameObject:
   - component: {fileID: 1797804350829381816}
   m_Layer: 7
   m_Name: BlueBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2851,6 +2851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 10
   CentrePoint: {fileID: 0}
+  IsAggressive: 0
 --- !u!195 &6838350073606271131
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2897,9 +2898,11 @@ MonoBehaviour:
   EnemyHealth: 6
   HealingOrb: {fileID: 0}
   Distance: 0
-  KnockBackDistance: 0
-  EnemyDamage: 0
+  KnockBackDistance: 500
+  EnemyDamage: 3
+  IsBoss: 1
   DetectionRadious: {fileID: 8237352997105217239}
+  Player: {fileID: 0}
   LundgeIntervul: 0
   LundgeDistance: 0
   LundingInterval: 0
