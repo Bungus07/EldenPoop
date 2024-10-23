@@ -192,8 +192,10 @@ public class PlayerController : MonoBehaviour
         { 
             HitTarget(hit.point);
             Debug.Log("RaycastHasHit " + hit.collider.name);
-            if(hit.transform.TryGetComponent<EnemyControls>(out EnemyControls T))
-            { T.DamageEnemy(attackDamage); }
+            if(hit.transform.parent.TryGetComponent<EnemyControls>(out EnemyControls T))
+            { T.DamageEnemy(attackDamage);
+                Debug.Log("EnemyControllScript = " + T);
+            }
         } 
     }
     void HitTarget(Vector3 pos)

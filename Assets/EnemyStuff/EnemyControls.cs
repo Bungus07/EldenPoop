@@ -73,6 +73,10 @@ public class EnemyControls : MonoBehaviour
         EnemyOrigonalRotation = gameObject.transform.rotation;
         Speed = BaseSpeed;
         EnemyOriginalEulerRotation = gameObject.transform.localEulerAngles;
+        if (gameObject.GetComponent<BossController>() != null)
+        {
+            Player.transform.GetChild(2).GetComponent<Compass>().BossEnemy = gameObject;
+        }
     }
     private void FixedUpdate()
     {
@@ -169,6 +173,7 @@ public class EnemyControls : MonoBehaviour
     {
         EnemyHealth = EnemyHealth - DamageAmount;
         EnemyHealthBar.value = EnemyHealth;
+        Debug.Log("EnemyHasBeenDamaged");
         if (EnemyHealth <= 0) 
         {
             EnemyDeath();
