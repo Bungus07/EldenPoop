@@ -605,6 +605,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6431327457660828315, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -442
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431327457660828315, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 276
+      objectReference: {fileID: 0}
     - target: {fileID: 6675502508860020635, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e, type: 3}
       propertyPath: m_Layer
       value: 6
